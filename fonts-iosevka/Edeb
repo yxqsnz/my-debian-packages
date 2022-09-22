@@ -1,0 +1,21 @@
+# TODO: Fetch all fonts from Iosevka repository.
+
+name=fonts-iosevka
+description="Iosevka fonts"
+version=1.0-1
+arch=all
+depends=fontconfig
+maintainer="Moizes J. Sousa <yxqsnz@gmail.com>"
+
+sources() {
+  local-add Fonts/* 
+}
+
+prepare() {
+  cd $srcdir
+}
+
+install() {
+  mkdir -p $pkgdir/usr/share/fonts/freetype/
+  mv * $pkgdir/usr/share/fonts/freetype/
+}
