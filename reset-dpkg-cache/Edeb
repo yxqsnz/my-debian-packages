@@ -1,0 +1,21 @@
+name=reset-dpkg-service
+description="resets dpkg caches"
+version=0.1.0
+depends=systemd
+maintainer="Moizes J. Sousa <yxqsnz@gmail.com>"
+arch=all
+
+sources() {
+  local-add SystemD/*
+}
+
+prepare() {
+ cd $srcdir
+}
+
+install() {
+  mkdir -p $pkgdir/etc/systemd/system/
+  mv {*.service,*.timer} $pkgdir/etc/systemd/system/
+}
+
+# vi: ft=bash
