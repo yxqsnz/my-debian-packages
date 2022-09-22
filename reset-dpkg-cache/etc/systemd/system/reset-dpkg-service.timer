@@ -1,0 +1,11 @@
+[Unit]
+Description=Resets dpkg cache every 1 day.
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+OnBootSec=120
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+

@@ -1,0 +1,10 @@
+[Unit]
+Description=Resets dpkg cache
+Wants=reset-dpkg-cache.timer
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/dpkg --clear-avail
+
+[Install]
+WantedBy=multi-user.target

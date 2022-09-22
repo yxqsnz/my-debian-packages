@@ -1,0 +1,5 @@
+Package: reset-dpkg-cache
+Maintainer: Moizes J. Sousa <yxqsnz@gmail.com>
+Version: 1.0
+Architecture: amd64
+Description: resets dpkg cache
