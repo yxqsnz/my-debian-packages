@@ -1,0 +1,21 @@
+name=discord-canary-systemd-unit
+description="Discord Canary SystemD unit"
+version=0.1.0
+depends="systemd, discord-canary"
+maintainer="Moizes J. Sousa <yxqsnz@gmail.com>"
+arch=all
+
+sources() {
+  local-add discord-canary.service
+}
+
+prepare() {
+ cd $srcdir
+}
+
+install() {
+  mkdir -p $pkgdir/etc/systemd/user/
+  mv discord-canary.service $pkgdir/etc/systemd/user
+}
+
+# vi: ft=bash

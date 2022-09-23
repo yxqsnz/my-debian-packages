@@ -1,0 +1,11 @@
+[Unit]
+Description=Chat for Communities and Friends
+
+[Service]
+ExecStart=/usr/bin/discord-canary
+MemoryAccounting=true
+MemoryHigh=700M
+MemoryMax=1.2G
+
+[Install]
+WantedBy=default.target
