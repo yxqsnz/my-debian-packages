@@ -1,0 +1,8 @@
+# C
+{"name": "gcc", "type": "compiler"} 
+{"name": "clang", "type": "compiler"} 
+
+
+# Rust
+{"name": "rustc", "type": "compiler"} 
+

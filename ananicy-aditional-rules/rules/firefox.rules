@@ -1,0 +1,18 @@
+# https://www.mozilla.org/firefox/
+{ "name": "firefox", "type":"normal-app" }
+{ "name": "firefox-bin", "type":"normal-app" }
+{ "name": "firefox-esr", "type":"normal-app" }
+# Tor browser
+{ "name": "firefox.real", "type":"normal-app" }
+# Icecat
+{ "name": "icecat", "type":"normal-app" }
+# Firefox Nightly (https://wiki.mozilla.org/Nightly)
+{ "name": "firefox-nightly", "type":"normal-app" }
+
+# Firefox Browser Developer Edition (https://www.mozilla.org/en-US/firefox/developer/)
+{ "name": "firefox-developer-edition", "type":"normal-app" } 
+
+# LibreWolf (https://librewolf-community.gitlab.io/)
+{ "name": "librewolf", "type":"normal-app" } 
+{ "name": "librewolf-bin", "type":"normal-app" } 
+{ "name": "librewolf-nightly", "type":"normal-app" } 

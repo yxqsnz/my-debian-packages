@@ -1,0 +1,34 @@
+clang_as_dep=$([ -z "${USE_SYSTEM_CC}"] && echo "clang") 
+name=ananicy-cpp
+description="Ananicy rewritten in C++ for much lower CPU and memory usage."
+version=1.0.0-rc6
+builddepends="${clang_as_dep} cmake libsystemd-dev"
+maintainer="Moizes J. Sousa <yxqsnz@gmail.com>"
+arch=amd64
+
+export MAKEOPTS="-j$(nproc)"
+export MAKEFLAGS="${MAKEOPTS}"
+
+if [ -z "USE_SYSTEM_CC" ]; then
+  export CC=clang
+fi
+
+sources() {
+  git-add "https://gitlab.com/ananicy-cpp/ananicy-cpp.git" _src
+}
+
+prepare() {
+ cd $srcdir/_src
+ git submodule update --init --recursive
+ cmake -B build -DCMAKE_RELEASE_TYPE=Release -S .
+}
+
+build() {
+  cmake --build build --target ananicy-cpp
+}
+
+install() {
+ cmake --install build --component Runtime 
+}
+
+# vi: ft=bash

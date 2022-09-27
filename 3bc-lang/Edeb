@@ -1,0 +1,27 @@
+name=3bc-lang
+description="Low-level language, tiny virtual machine, intermediate representation, embeddable, easy for beginners. (Friendly Punched cards)"
+version=0.1.0+3bc-3.1.0
+builddepends="gcc make"
+maintainer="Moizes J. Sousa <yxqsnz@gmail.com>"
+arch=amd64
+
+sources() {
+  git-add "https://github.com/RodrigoDornelles/3bc-lang" _3bc
+}
+
+prepare() {
+ cd $srcdir
+}
+
+build() {
+  pushd $srcdir/_3bc
+    gcc -o ../3bc programs/interpreter.c -O2 -fPIC -lm -Wall
+  popd
+}
+
+install() {
+  mkdir -p $pkgdir/usr/bin
+  mv 3bc $pkgdir/usr/bin
+}
+
+# vi: ft=bash

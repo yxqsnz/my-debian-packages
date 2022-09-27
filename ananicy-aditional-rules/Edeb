@@ -1,0 +1,21 @@
+name=ananicy-aditional-rules
+description="More rules for Ananicy."
+version=0.1.0
+depends=ananicy-cpp
+maintainer="Moizes J. Sousa <yxqsnz@gmail.com>"
+arch=amd64
+
+sources() {
+  local-add rules/*
+}
+
+prepare() {
+  cd $srcdir
+}
+
+install() {
+  mkdir -p $pkgdir/etc/ananicy.d
+  mv $srcdir/* $pkgdir/etc/ananicy.d/
+}
+
+# vi: ft=bash

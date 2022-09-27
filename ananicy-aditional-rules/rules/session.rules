@@ -1,0 +1,5 @@
+{"name": "plasmashell",  "type": "runtime"}
+{"name": "kwin_x11", "type": "runtime"}
+{"name": "kwin_wayland", "type": "runtime"}
+{"name": "kwin_wayland_wrapper", "type": "runtime"}
+{"name": "Xorg", "type": "runtime", "ionice": 1}

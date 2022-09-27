@@ -1,0 +1,4 @@
+{"type": "compiler", "nice": 19, "sched": "batch", "ioclass": "idle"}
+{"type": "runtime", "nice": -10, "ioclass": "realtime"}
+{"type": "normal-app",   "nice": -3}
+
